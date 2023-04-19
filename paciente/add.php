@@ -69,8 +69,8 @@ footer {
 
 <body>
  
-  <!-- Barra de Navegación -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary barra">
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary barra">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"> <img src="./imagenes/logo2.png " alt=""width="50px"> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,19 +108,19 @@ footer {
   <form method="POST" enctype="multipart/form-data">
     <div class="row mb-2">
       <div class="col-md-6 mb-3">
-        <input type="text" name="nombres" id="nombres" placeholder="Nombres del Paciente" class="form-control" />
+        <input type="text" name="nombres" id="nombres" placeholder="Nombres del Usuario" class="form-control" />
       </div>
       <div class="col-md-6 mb-3">
-        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos del Paciente" class="form-control" />
+        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos del Usuario" class="form-control" />
       </div>
       <div class="col-md-6 mb-3">
-        <input type="email" name="email" id="email" placeholder="Email del Paciente" class="form-control" />
+        <input type="email" name="email" id="email" placeholder="Email del Usuario" class="form-control" />
       </div>
       <div class="col-md-6 mb-3">
-        <input type="text" name="celular" id="celular" placeholder="Celular del Paciente" class="form-control" />
+        <input type="text" name="celular" id="celular" placeholder="Celular del Usuario" class="form-control" />
       </div>
       <div class="col-md-6 mb-3">
-        <textarea id="enfermedades" name="enfermedades" placeholder="Enfermedades del Paciente" class="form-control"></textarea>
+        <textarea id="enfermedades" name="enfermedades" placeholder="Enfermedades del Usuario" class="form-control"></textarea>
       </div>
       <div class="col-md-6 mb-3">
         <input type="text" name="duracionsecion" id="duracionsecion" placeholder="Duracion Sesion" class="form-control" />
