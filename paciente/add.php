@@ -10,6 +10,8 @@ if (isset($_POST) && !empty($_POST)){
   
     if ($_FILES['pdf']['name'] !== ''){
       $_POST['pdf'] = saveImage($_FILES);
+    }else{
+      $_POST['pdf'] =null;
     }
   
     $save = $data-> save($_POST); /* UTILICE LA RECETA SAVE */
@@ -53,6 +55,7 @@ footer {
   footer a:hover {
     text-decoration: underline;
   }
+
 </style>
 
 <style>
@@ -120,7 +123,7 @@ footer {
         <input type="text" name="celular" id="celular" placeholder="Celular del Usuario" class="form-control" />
       </div>
       <div class="col-md-6 mb-3">
-        <textarea id="enfermedades" name="enfermedades" placeholder="Enfermedades del Usuario" class="form-control"></textarea>
+        <textarea id="enfermedades" name="enfermedades" placeholder="Descripción de Solicitud Usuario" class="form-control"></textarea>
       </div>
       <div class="col-md-6 mb-3">
         <input type="text" name="duracionsecion" id="duracionsecion" placeholder="Duracion Sesion" class="form-control" />
@@ -136,6 +139,8 @@ footer {
       <button class="btn btn-primary">Registrar</button>
     </div>
   </form>
+  <br>
+  <a class="btn btn-primary" href="index.php"> Ver Listado de consultas</a>
 </div>
 
 <br>

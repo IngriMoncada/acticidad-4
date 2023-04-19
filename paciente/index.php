@@ -67,16 +67,18 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
         <div class="row">
             <?php
             while ($usuarios= mysqli_fetch_object($todosRegistros)){
+              
                 echo "<div class='col-6'>";
                 echo "<div class='border border-info p-2'>";
-                echo "<h5>Nombre: $usuarios->nombres $usuarios->apellidos  </h5>";
-                echo "<p><b>Correo:</b> $usuarios->email 
+                echo "<h5>Nombre: $usuarios->Nombre $usuarios->Apellido  </h5>";
+                echo "<p><b>Correo:</b> $usuarios->Email 
                 <br>
-                <b> Celular: </b>  $usuarios->celular
-                </p>";
-                echo " <p> <b>Fecha:</b> ".date("D", strtotime($usuarios->fecha)) . " " . date("d-M-Y H:i", strtotime($usuarios->fecha)). " </p> ";
-
-                echo "<div class='center'> <a class='btn btn-success' href='". ROOT ."/paciente/edit.php?id=$usuarios->id' >Modificar</a> - <a class='btn btn-danger' href='". ROOT ."/paciente/index.php?id=$usuarios->id' >Eliminar</a> </div>";
+                <b> Celular: </b>  $usuarios->Celular
+                <br>";
+                echo "<b>Servicio:</b> $usuarios->Consulta<br>"; 
+                echo " <b>Fecha:</b> ".date("D", strtotime($usuarios->Fecha)) . " " . date("d-M-Y H:i", strtotime($usuarios->Fecha)). " </p> ";
+                echo "";
+                echo "<div class='center'> <a class='btn btn-success' href='". ROOT ."/paciente/edit.php?id=$usuarios->ID' >Modificar</a> - <a class='btn btn-danger' href='". ROOT ."/paciente/index.php?id=$usuarios->ID' >Eliminar</a> </div>";
 
                 echo "</div>";
                 echo "</div>";

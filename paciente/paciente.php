@@ -21,20 +21,19 @@ class ingreso{
         $duracionsecion = $params["duracionsecion"];
         $fecha = $params["fecha"];
         $pdf = $params["pdf"];
-
-        $insert ="INSERT INTO pacientes values (NULL,'$nombres', '$apellidos', '$email', '$celular', '$enfermedades', '$duracionsecion', '$fecha','$pdf') ";
+        $insert ="INSERT INTO clientes (Nombre, Apellido, Email, Celular, Consulta, Duracion, Fecha, PDF) values ('$nombres', '$apellidos', '$email', '$celular', '$enfermedades', '$duracionsecion', '$fecha', '$pdf') ";
         return mysqli_query($this->conexion, $insert); /* ENVIAR A LA BD TODO LO QUE ESTE DENTRO DE INSERT */
 
     }
     function getAll(){
-        $basededatos= "SELECT * FROM pacientes"; /* Traigame todos los usuarios */
+        $basededatos= "SELECT * FROM clientes"; /* Traigame todos los usuarios */
         return mysqli_query($this->conexion, $basededatos);
     }
 
 
 function getOne($id)
 {
-    $sql = "SELECT * FROM pacientes WHERE id=$id";
+    $sql = "SELECT * FROM clientes WHERE id=$id";
     return mysqli_query($this->conexion, $sql);
 }
 
@@ -47,14 +46,14 @@ function update($params){
     $duracionsecion = $params["duracionsecion"];
     $fecha = $params["fecha"];
     $pdf = $params["pdf"];
-    $id = $params["id"];
+    $id = $params["id"];  
 
-        $update = "UPDATE pacientes SET nombres= '$nombres', apellidos='$apellidos', email= '$email', celular= '$celular', enfermedades ='$enfermedades', duracionsecion= '$duracionsecion', fecha= '$fecha', pdf='$pdf' WHERE id = $id ";
+        $update = "UPDATE clientes SET nombre= '$nombres', apellido='$apellidos', email= '$email', celular= '$celular', consulta ='$enfermedades', duracion= '$duracionsecion', fecha= '$fecha', pdf='$pdf' WHERE id = $id ";
         return mysqli_query($this->conexion, $update);
 }
 
 function delete($id){
-    $delete = "DELETE FROM pacientes WHERE id = $id ";
+    $delete = "DELETE FROM clientes WHERE id = $id ";
     return mysqli_query($this->conexion, $delete);
 
 } 

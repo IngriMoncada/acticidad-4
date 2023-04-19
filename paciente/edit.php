@@ -3,10 +3,10 @@ include('../config/config.php');
 include('paciente.php');
 $p = new ingreso();
 $data = mysqli_fetch_object($p->getOne($_GET['id']));
-$date = new DateTime($data->fecha);
+$date = new DateTime($data->Fecha);
 
 if (isset($_POST) && !empty($_POST)){
-  $_POST['pdf'] = $data->pdf;
+  $_POST['pdf'] = $data->PDF;
   if ($_FILES['pdf']['name'] !== ''){
     $_POST['pdf'] = saveImage($_FILES);
   }
@@ -77,33 +77,33 @@ if (isset($error)){
 
         <div class="row mb-3">
             <div class="col-md-6 mb-3">
-                <input type="text" name="nombres" id="nombres" placeholder="Nombres del Paciente" class="form-control" value="<?= $data->nombres ?>" />
-                <input type="hidden" name="id" id="id" value="<?= $data->id ?>" />
+                <input type="text" name="nombres" id="nombres" placeholder="Nombres del Paciente" class="form-control" value="<?= $data->Nombre ?>" />
+                <input type="hidden" name="id" id="id" value="<?= $data->ID ?>" />
 
             </div>
             <div class="col-md-6 mb-3">
-                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos del Paciente" class="form-control" value="<?= $data->apellidos ?>" />
-
-            </div>
-
-
-            <div class="col-md-6 mb-3">
-                <input type="email" name="email" id="email" placeholder="Email del Paciente" class="form-control" value="<?= $data->email ?>" />
-
-            </div>
-            <div class="col-md-6 mb-3">
-                <input type="text" name="celular" id="celular" placeholder="Celular del Paciente" class="form-control" value="<?= $data->celular ?>" />
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos del Paciente" class="form-control" value="<?= $data->Apellido ?>" />
 
             </div>
 
 
             <div class="col-md-6 mb-3">
-                <textarea id="enfermedades" name="enfermedades" placeholder="Enfermedades del Paciente" class="form-control"><?= $data->enfermedades ?></textarea>
+                <input type="email" name="email" id="email" placeholder="Email del Paciente" class="form-control" value="<?= $data->Email ?>" />
+
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" name="celular" id="celular" placeholder="Celular del Paciente" class="form-control" value="<?= $data->Celular ?>" />
+
+            </div>
+
+
+            <div class="col-md-6 mb-3">
+                <textarea id="enfermedades" name="enfermedades" placeholder="Enfermedades del Paciente" class="form-control"><?= $data->Consulta ?></textarea>
 
 
             </div>
             <div class="col-md-6 mb-3">
-                <input type="text" name="duracionsecion" id="duracionsecion" placeholder="Duración Sesión" class="form-control" value="<?= $data->duracionsecion ?>" />
+                <input type="text" name="duracionsecion" id="duracionsecion" placeholder="Duración Sesión" class="form-control" value="<?= $data->Duracion ?>" />
 
             </div>
 
