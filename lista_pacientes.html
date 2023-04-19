@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary barra">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#"> <img src="./imagenes/logo2.png " alt="" width="50px"> </a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav letra">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pagina1.html">Consejos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./paciente/add.php">Separa una Cita</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Servicios
+					</a>
+					<ul class="dropdown-menu letra">
+						<li><a class="nav-link dropdown" href="./empresas.html">Empresas</a></li>
+						<li><a class="nav-link -link dropdown-item" href="./particulares.html">Particulares</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+	<title>Lista de Pacientes</title>
+</head>
+<body>
+	<h1>Lista de Pacientes</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Email</th>
+				<th>Celular</th>
+				<th>Enfermedades</th>
+				<th>Duración de sesión</th>
+				<th>Fecha</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				include('config/config.php');
+				include('classes/paciente.php');
+				$paciente = new ingreso();
+				$result = $paciente->getAll();
+				while ($row = mysqli_fetch_array($result)) {
+					echo "<tr>";
+					echo "<td>".$row['nombres']."</td>";
+					echo "<td>".$row['apellidos']."</td>";
+					echo "<td>".$row['email']."</td>";
+					echo "<td>".$row['celular']."</td>";
+					echo "<td>".$row['enfermedades']."</td>";
+					echo "<td>".$row['duracionsecion']."</td>";
+					echo "<td>".$row['fecha']."</td>";
+					echo "</tr>";
+				}
+			?>
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,237 @@
+/* Estilos generales del encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+
+
+/* Estilos del logo de la empresa */
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Consultas de medios para hacer que el encabezado sea responsive */
+@media (max-width: 700px) {
+
+  /* Cambiar el diseño del encabezado cuando la pantalla es más pequeña */
+  header {
+    flex-direction: column;
+  }
+
+  /* Centrar el logo cuando la pantalla es más pequeña */
+  .logo {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  /* Alinear los elementos del menú verticalmente cuando la pantalla es más pequeña */
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Ajustar el margen de los elementos del menú cuando la pantalla es más pequeña */
+  nav li {
+    margin: 5px 0;
+  }
+}
+
+#carrusel {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider {
+  width: 80%;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 60%;
+  height: auto;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider img:first-child {
+  display: block;
+}
+
+.botones {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.botones button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #0c0101;
+}
+
+.botones button:hover {
+  cursor: pointer;
+  background-color: #555;
+}
+
+
+
+/* Estilo parrafo que es entrevista */
+#about {
+  background-color: rgb(233, 225, 181);
+}
+
+#about p {
+  text-align: justify;
+  color: rgb(0, 0, 14);
+  font-size: 18px;
+}
+
+
+#Paraquesirve {
+  background-color: rgb(233, 225, 181);
+}
+
+#Paraquesirve p {
+  text-align: justify;
+  color: rgb(0, 0, 14);
+  font-size: 18px;
+}
+
+
+<section style="background-color: blue; text-align: center;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <div class="ratio-16x9" style="display: inline-block;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mFDfaPSAXjI" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<section style="background-color: blue; text-align: center;">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <div class="ratio-16x9" style="display: inline-block;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/mFDfaPSAXjI" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+/* Estilo para la sección de presentación de integrantes del equipo */
+.team-section {
+  margin-top: 50px;
+  /* Margen superior de 50 píxeles */
+  display: flex;
+  /* Utilizamos flexbox para alinear los miembros del equipo */
+  flex-wrap: wrap;
+  /* Permite que los miembros del equipo se ajusten al tamaño de la pantalla */
+  justify-content: center;
+  /* Centra los miembros del equipo horizontalmente */
+}
+
+/* Estilo para los miembros del equipo */
+.team-member {
+  margin: 20px;
+  /* Margen de 20 píxeles alrededor de cada miembro */
+  text-align: center;
+  /* Centra el contenido del miembro del equipo */
+}
+
+/* Estilo para la imagen del miembro del equipo */
+.team-img {
+  border-radius: 50%;
+  /* Añade un borde redondeado del 50% a la imagen */
+  width: 150px;
+  /* Establece un ancho de 150 píxeles para la imagen */
+  height: 150px;
+  /* Establece una altura de 150 píxeles para la imagen */
+  object-fit: cover;
+  /* Hace que la imagen cubra todo el contenedor sin deformarse */
+}
+
+/* Estilo para el nombre del miembro del equipo */
+.team-member h3 {
+  margin-top: 10px;
+  /* Margen superior de 10 píxeles */
+}
+
+/* Estilo para la descripción del miembro del equipo */
+.team-member p {
+  margin-top: 10px;
+  /* Margen superior de 10 píxeles */
+  font-size: 16px;
+  /* Establece un tamaño de fuente de 16 píxeles para la descripción */
+  line-height: 1.5;
+  /* Establece la altura de línea en 1.5 veces el tamaño de fuente */
+}
+
+      
+/*carrusel de fotos*/
+/* Para el ancho y alto de las imagenes. Modificalo a gusto =)  */
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+  width: 100%;
+  height: 500px;
+  margin: auto;
+}
+
+/* Para los margenes del contendor de las fotos. Podes cambiarle el ancho a gusto tambien! */
+.carousel-control {
+  width: 10%;
+}
+
+        
+    
+        /* Para el ancho y alto de las imagenes. Modificalo a gusto =)  */
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+          width: 100%;
+          height: 500px;
+          margin: auto;
+        }
+    
+        /* Para los margenes del contendor de las fotos. Podes cambiarle el ancho a gusto tambien! */
+        .carousel-control {
+          width: 10%;
+        }
+    
+.img-fluid {
+  max-width: 500px;
+}
+

@@ -28,16 +28,12 @@ if (isset($_POST) && !empty($_POST)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../estilos.css">
+  <link rel="stylesheet" href="estilos.css">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
-
-
-    
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
 <style>
 footer {
@@ -79,21 +75,21 @@ footer {
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav letra">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pagina1.html">Consejos</a>
+            <a class="nav-link" href="pagina1.html">Consejos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="add.php">Separa una Cita</a>
+            <a class="nav-link" href="paciente/add.php">Separa una Cita</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Servicios
             </a>
             <ul class="dropdown-menu letra">
-              <li><a class="nav-link dropdown" href="../empresas.html">Empresas</a></li>
-              <li><a class="nav-link -link dropdown-item" href="../particulares.html">Particulares</a></li>
+              <li><a class="nav-link dropdown" href="./empresas.html">Empresas</a></li>
+              <li><a class="nav-link -link dropdown-item" href="./particulares.html">Particulares</a></li>
             </ul>
           </li>
         </ul>
@@ -148,8 +144,8 @@ footer {
 
   <br>
   <br>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 

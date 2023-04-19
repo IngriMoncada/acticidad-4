@@ -24,13 +24,46 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style> 
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+  }
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<style>
+  #derechos h3{
+    background-color: #0611ad; /* Fondo azul oscuro */
+    color: white; /* Texto en color blanco */
+    font-size: 12px; /* Tamaño de letra más grande */
+    text-align: center; /* Alineación de texto centrado */
+    padding: 2px; /* Espaciado interno para separar el contenido del borde */
+  }
+</style>
+
 </head>
 <body>
+
+
+
+
+
     <?php include('../menu.php'); ?>
 
     <div class="container">
-        <h3>Lista de pacientes</h3>
-
+        <h3>Lista de Citas</h3>
+        <br>
+        
         <div class="row">
             <?php
             while ($usuarios= mysqli_fetch_object($todosRegistros)){
@@ -54,8 +87,82 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
         </div>
     </div>
     
+    <br>
+        <br>
 
+   <div class="container">     
+      <section style="background-color: blue; color: #fff; text-align: center;">
+          <a href="index.php?id=1" style="color: #fff; font-weight: bold; font-size: 2em; text-decoration: none;">Actualizar Página luego de Eliminar</a>
+      </section>
+    </div>
+  <br>
+  <br>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
+
+<footer style="position: static; bottom: 0; left: 0; right: 0;">
+<div class="container">
+  <div class="container-fluid">
+  
+    <div class="row p-3 bg-dark text-white">
+  
+      <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h3" Columna>PsyRecruiters</p>
+        <p class="text-secondary">Bogota,Colombia</p>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h5 mb-2">Nuestros Servicios</p>
+        <div class="mb-2">
+          <a class="text-secondary text-decoration-none" href="#">Capacitaciones</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-secondary text-decoration-none" href="#">Cursos</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-secondary text-decoration-none" href="#">Tips</a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h5 mb-2">Links</p>
+        <div class="mb-2">
+          <a class="text-secondary text-decoration-none" href="#">Terminos y condiciones</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-secondary text-decoration-none" href="#">Politica de privacidad</a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h5 mb-2">Contacto</p>
+        <div class="mb-2">
+          <a class="text-secondary text-decoration-none" href="#">Instagram</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-secondary text-decoration-none" href="#">Facebook</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-secondary text-decoration-none" href="#">Twitter</a>
+  
+
+      
+  
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+
+<div class="container">
+  <section id="derechos">
+    <div class="container">
+      <h3>Copyright-All rights reserved PsyRecruiters ©2023</h3>
+    </div>
+  </section>
+  </div>
+  <br>
+
+
+
+</footer>
 </html>
